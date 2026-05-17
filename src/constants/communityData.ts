@@ -1,0 +1,86 @@
+export const COMMUNITY_HELPERS = [
+  {
+    id: "doctor",
+    name: "Doctor",
+    image: require("../../assets/images/jobs/doctor.png"),
+    color: "#FF5722",
+  },
+  {
+    id: "teacher",
+    name: "Teacher",
+    image: require("../../assets/images/jobs/teacher.png"),
+    color: "#FFC107",
+  },
+  {
+    id: "police",
+    name: "Police Officer",
+    image: require("../../assets/images/jobs/policeman.png"),
+    color: "#03A9F4",
+  },
+  {
+    id: "firefighter",
+    name: "Firefighter",
+    image: require("../../assets/images/jobs/firefighter.png"),
+    color: "#F44336",
+  },
+  {
+    id: "astronaut",
+    name: "Astronaut",
+    image: require("../../assets/images/jobs/astronaut.png"),
+    color: "#673AB7",
+  },
+  {
+    id: "engineer",
+    name: "Engineer",
+    image: require("../../assets/images/jobs/engineers.png"),
+    color: "#795548",
+  },
+  {
+    id: "scientist",
+    name: "Scientist",
+    image: require("../../assets/images/jobs/scientist.png"),
+    color: "#009688",
+  },
+  {
+    id: "artist",
+    name: "Artist",
+    image: require("../../assets/images/jobs/artist.png"),
+    color: "#E91E63",
+  },
+  {
+    id: "chef",
+    name: "Chef",
+    image: require("../../assets/images/jobs/chef.png"),
+    color: "#9E9E9E",
+  },
+  {
+    id: "pilot",
+    name: "Pilot",
+    image: require("../../assets/images/jobs/pilot.png"),
+    color: "#03A9F4",
+  },
+  {
+    id: "writer",
+    name: "Writer",
+    image: require("../../assets/images/jobs/writer.png"),
+    color: "#FFC107",
+  },
+  {
+    id: "musician",
+    name: "Musician",
+    image: require("../../assets/images/jobs/saxophonist.png"),
+    color: "#E91E63",
+  },
+  {
+    id: "athlete",
+    name: "Athlete",
+    image: require("../../assets/images/jobs/athlete.png"),
+    color: "#4CAF50",
+  },
+  {
+    id: "entrepreneur",
+    name: "Entrepreneur",
+    image: require("../../assets/images/jobs/entrepreneurship.png"),
+    color: "#FF9800",
+  },
+];
