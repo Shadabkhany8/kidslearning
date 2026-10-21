@@ -107,11 +107,11 @@ export const GamesTab: React.FC = () => {
         .games-screen-scroll {
           display: flex;
           flex-direction: column;
-          gap: clamp(10px, 1.8vh, 18px);
+          gap: clamp(14px, 2.2vh, 22px);
         }
 
         .games-header {
-          padding: clamp(12px, 1.8vh, 18px) 16px clamp(4px, 0.8vh, 8px) 16px;
+          padding: clamp(16px, 2.2vh, 24px) 18px clamp(6px, 1vh, 10px) 18px;
           position: relative;
           z-index: 10;
           flex-shrink: 0;
@@ -129,7 +129,7 @@ export const GamesTab: React.FC = () => {
           align-items: center;
           justify-content: space-between;
           gap: 12px;
-          margin-bottom: clamp(6px, 1vh, 10px);
+          margin-bottom: clamp(8px, 1.2vh, 12px);
         }
 
         .wide-mode .games-header-row {
@@ -139,15 +139,15 @@ export const GamesTab: React.FC = () => {
         .avatar-info-group {
           display: flex;
           align-items: center;
-          gap: 10px;
+          gap: 12px;
         }
 
         .games-avatar-pod {
-          width: clamp(44px, 6vh, 52px);
-          height: clamp(44px, 6vh, 52px);
+          width: clamp(52px, 6.8vh, 60px);
+          height: clamp(52px, 6.8vh, 60px);
           border-radius: 50%;
           background: #FFEBEB;
-          border: 2px solid #FFF0F0;
+          border: 2.5px solid #FFF0F0;
           display: flex;
           align-items: center;
           justify-content: center;
@@ -161,14 +161,14 @@ export const GamesTab: React.FC = () => {
         }
 
         .greeting-heading {
-          font-size: clamp(17px, 2.2vh, 20px);
+          font-size: clamp(19px, 2.5vh, 22px);
           font-weight: 900;
           color: #1F2937;
           letter-spacing: -0.4px;
         }
 
         .greeting-sub {
-          font-size: clamp(11.5px, 1.4vh, 13px);
+          font-size: clamp(12.5px, 1.5vh, 14px);
           color: #6B7280;
           font-weight: 600;
         }
@@ -176,37 +176,37 @@ export const GamesTab: React.FC = () => {
         .score-pill-badge {
           display: flex;
           align-items: center;
-          gap: 5px;
+          gap: 6px;
           color: white;
-          padding: clamp(4px, 0.7vh, 6px) clamp(10px, 1.2vw, 14px);
+          padding: clamp(6px, 0.8vh, 8px) clamp(12px, 1.6vw, 16px);
           border-radius: 25px;
           box-shadow: 0 4px 12px rgba(255, 118, 117, 0.3);
           flex-shrink: 0;
         }
 
         .score-number {
-          font-size: clamp(14px, 1.8vh, 17px);
+          font-size: clamp(16px, 2.1vh, 18px);
           font-weight: 900;
         }
 
         .games-progress-card {
           background: rgba(255, 255, 255, 0.9);
           backdrop-filter: blur(12px);
-          border-radius: 20px;
-          padding: clamp(8px, 1.2vh, 12px) 14px;
-          box-shadow: 0 6px 18px rgba(0, 0, 0, 0.05);
-          border: 1.5px solid rgba(255, 255, 255, 0.8);
+          border-radius: 24px;
+          padding: clamp(12px, 1.6vh, 16px) 18px;
+          box-shadow: 0 8px 22px rgba(0, 0, 0, 0.05);
+          border: 1.5px solid rgba(255, 255, 255, 0.85);
         }
 
         .games-progress-top {
           display: flex;
           justify-content: space-between;
           align-items: center;
-          margin-bottom: clamp(4px, 0.7vh, 6px);
+          margin-bottom: clamp(6px, 0.9vh, 8px);
         }
 
         .games-progress-title {
-          font-size: clamp(13px, 1.6vh, 15px);
+          font-size: clamp(15px, 1.9vh, 17px);
           font-weight: 900;
           color: #1F2937;
         }
@@ -217,19 +217,19 @@ export const GamesTab: React.FC = () => {
           gap: 4px;
           background: rgba(255, 118, 117, 0.12);
           border: 1px solid rgba(255, 118, 117, 0.25);
-          padding: 2px 10px;
+          padding: 3px 12px;
           border-radius: 20px;
-          font-size: 11px;
+          font-size: 11.5px;
           font-weight: 800;
           color: #FF7675;
         }
 
         .progress-bar-track {
-          height: clamp(8px, 1.1vh, 10px);
+          height: clamp(10px, 1.4vh, 12px);
           background: rgba(0, 0, 0, 0.06);
           border-radius: 10px;
           overflow: hidden;
-          margin-bottom: clamp(4px, 0.7vh, 6px);
+          margin-bottom: clamp(6px, 0.9vh, 8px);
         }
 
         .progress-bar-fill {
@@ -240,7 +240,7 @@ export const GamesTab: React.FC = () => {
         }
 
         .achievement-subtext {
-          font-size: clamp(11px, 1.3vh, 12.5px);
+          font-size: clamp(12.5px, 1.5vh, 13.5px);
           color: #4A5568;
           font-weight: 700;
           text-align: center;
@@ -254,7 +254,7 @@ export const GamesTab: React.FC = () => {
         .cards-two-column-grid {
           display: grid;
           grid-template-columns: repeat(2, 1fr);
-          gap: clamp(8px, 1.3vh, 12px);
+          gap: clamp(12px, 1.6vh, 16px);
         }
 
         .wide-mode .cards-two-column-grid {

@@ -139,11 +139,11 @@ export const LearnTab: React.FC = () => {
         .learn-screen-scroll {
           display: flex;
           flex-direction: column;
-          gap: clamp(8px, 1.5vh, 14px);
+          gap: clamp(12px, 1.8vh, 18px);
         }
 
         .learn-header {
-          padding: clamp(12px, 1.8vh, 18px) 16px clamp(4px, 0.8vh, 8px) 16px;
+          padding: clamp(16px, 2.2vh, 24px) 18px clamp(6px, 1vh, 10px) 18px;
           position: relative;
           z-index: 10;
           flex-shrink: 0;
@@ -159,15 +159,15 @@ export const LearnTab: React.FC = () => {
         .avatar-info-group {
           display: flex;
           align-items: center;
-          gap: 10px;
+          gap: 12px;
         }
 
         .user-avatar-pod {
-          width: clamp(44px, 6vh, 52px);
-          height: clamp(44px, 6vh, 52px);
+          width: clamp(52px, 6.8vh, 60px);
+          height: clamp(52px, 6.8vh, 60px);
           border-radius: 50%;
           background: #E0E7FF;
-          border: 2px solid #EEF2FF;
+          border: 2.5px solid #EEF2FF;
           display: flex;
           align-items: center;
           justify-content: center;
@@ -191,7 +191,7 @@ export const LearnTab: React.FC = () => {
           right: -2px;
           background: white;
           border-radius: 50%;
-          padding: 2.5px;
+          padding: 3px;
           box-shadow: 0 2px 5px rgba(0, 0, 0, 0.12);
           display: flex;
         }
@@ -202,7 +202,7 @@ export const LearnTab: React.FC = () => {
         }
 
         .greeting-heading {
-          font-size: clamp(16px, 2.2vh, 20px);
+          font-size: clamp(19px, 2.5vh, 22px);
           font-weight: 900;
           color: #1F2937;
           letter-spacing: -0.4px;
@@ -210,26 +210,26 @@ export const LearnTab: React.FC = () => {
         }
 
         .greeting-sub {
-          font-size: clamp(11.5px, 1.4vh, 13px);
+          font-size: clamp(12.5px, 1.5vh, 14px);
           color: #6B7280;
           font-weight: 600;
-          margin-top: 1px;
+          margin-top: 2px;
         }
 
         .score-pill-badge {
           display: flex;
           align-items: center;
-          gap: 5px;
+          gap: 6px;
           background: #6C5CE7;
           color: white;
-          padding: clamp(4px, 0.7vh, 6px) clamp(10px, 1.2vw, 14px);
+          padding: clamp(6px, 0.8vh, 8px) clamp(12px, 1.6vw, 16px);
           border-radius: 25px;
           box-shadow: 0 4px 12px rgba(108, 92, 231, 0.3);
           flex-shrink: 0;
         }
 
         .score-number {
-          font-size: clamp(14px, 1.8vh, 17px);
+          font-size: clamp(16px, 2.1vh, 18px);
           font-weight: 900;
         }
 
@@ -241,8 +241,8 @@ export const LearnTab: React.FC = () => {
         .cards-two-column-grid {
           display: grid;
           grid-template-columns: repeat(2, 1fr);
-          gap: clamp(8px, 1.3vh, 12px);
-          margin-bottom: clamp(8px, 1.3vh, 14px);
+          gap: clamp(12px, 1.6vh, 16px);
+          margin-bottom: clamp(12px, 1.6vh, 16px);
         }
 
         .wide-mode .cards-two-column-grid {
@@ -253,24 +253,24 @@ export const LearnTab: React.FC = () => {
 
         .explore-more-banner {
           background: linear-gradient(135deg, #6C5CE7 0%, #A78BFA 100%);
-          border-radius: 22px;
-          padding: clamp(8px, 1.2vh, 12px) clamp(12px, 1.8vw, 16px);
+          border-radius: 26px;
+          padding: clamp(12px, 1.6vh, 16px) clamp(16px, 2vw, 20px);
           cursor: pointer;
-          box-shadow: 0 6px 20px rgba(108, 92, 231, 0.25);
+          box-shadow: 0 8px 24px rgba(108, 92, 231, 0.28);
           border: 2px solid rgba(255, 255, 255, 0.6);
-          margin-bottom: clamp(6px, 1vh, 10px);
+          margin-bottom: clamp(8px, 1.2vh, 14px);
           flex-shrink: 0;
         }
 
         .explore-banner-content {
           display: flex;
           align-items: center;
-          gap: 12px;
+          gap: 14px;
         }
 
         .explore-banner-icon-pod {
-          width: clamp(38px, 5vh, 46px);
-          height: clamp(38px, 5vh, 46px);
+          width: clamp(48px, 6.2vh, 54px);
+          height: clamp(48px, 6.2vh, 54px);
           border-radius: 50%;
           background: rgba(255, 255, 255, 0.25);
           display: flex;
@@ -280,8 +280,8 @@ export const LearnTab: React.FC = () => {
         }
 
         .explore-banner-icon {
-          width: clamp(24px, 3.4vh, 30px);
-          height: clamp(24px, 3.4vh, 30px);
+          width: clamp(30px, 4vh, 36px);
+          height: clamp(30px, 4vh, 36px);
           object-fit: contain;
         }
 
@@ -290,14 +290,14 @@ export const LearnTab: React.FC = () => {
         }
 
         .explore-banner-title {
-          font-size: clamp(14px, 1.8vh, 17px);
+          font-size: clamp(16.5px, 2.2vh, 19px);
           font-weight: 900;
           color: white;
-          margin-bottom: 1px;
+          margin-bottom: 2px;
         }
 
         .explore-banner-sub {
-          font-size: clamp(11px, 1.3vh, 12.5px);
+          font-size: clamp(12.5px, 1.5vh, 13.5px);
           color: rgba(255, 255, 255, 0.9);
           font-weight: 600;
         }
@@ -305,8 +305,8 @@ export const LearnTab: React.FC = () => {
         .explore-banner-arrow {
           background: rgba(255, 255, 255, 0.2);
           border-radius: 50%;
-          width: clamp(28px, 4vh, 34px);
-          height: clamp(28px, 4vh, 34px);
+          width: clamp(32px, 4.4vh, 38px);
+          height: clamp(32px, 4.4vh, 38px);
           display: flex;
           align-items: center;
           justify-content: center;

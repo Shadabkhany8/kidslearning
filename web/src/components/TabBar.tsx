@@ -89,7 +89,7 @@ export const TabBar: React.FC = () => {
       <style>{`
         .tab-dock-container {
           position: absolute;
-          bottom: max(10px, env(safe-area-inset-bottom, 10px));
+          bottom: max(12px, env(safe-area-inset-bottom, 12px));
           left: 0;
           right: 0;
           display: flex;
@@ -101,11 +101,11 @@ export const TabBar: React.FC = () => {
 
         .tab-dock-glass {
           pointer-events: auto;
-          width: 86%;
-          max-width: 380px;
-          height: clamp(52px, 6.8vh, 62px);
+          width: 88%;
+          max-width: 390px;
+          height: clamp(56px, 7.2vh, 64px);
           border-radius: 35px;
-          background: rgba(255, 255, 255, 0.88);
+          background: rgba(255, 255, 255, 0.9);
           backdrop-filter: blur(20px);
           -webkit-backdrop-filter: blur(20px);
           border: 2px solid rgba(255, 255, 255, 0.95);
@@ -123,7 +123,7 @@ export const TabBar: React.FC = () => {
           align-items: center;
           justify-content: center;
           gap: 6px;
-          padding: clamp(6px, 0.9vh, 8px) clamp(10px, 1.8vw, 18px);
+          padding: clamp(7px, 1vh, 9px) clamp(12px, 2vw, 18px);
           border-radius: 26px;
           cursor: pointer;
           transition: all 0.25s cubic-bezier(0.34, 1.56, 0.64, 1);
@@ -149,12 +149,12 @@ export const TabBar: React.FC = () => {
         }
 
         .tab-icon-wrapper svg {
-          width: clamp(20px, 2.8vh, 24px);
-          height: clamp(20px, 2.8vh, 24px);
+          width: clamp(22px, 3vh, 25px);
+          height: clamp(22px, 3vh, 25px);
         }
 
         .tab-label {
-          font-size: clamp(12px, 1.5vh, 13.5px);
+          font-size: clamp(12.5px, 1.6vh, 14px);
           font-weight: 800;
           letter-spacing: -0.2px;
         }
