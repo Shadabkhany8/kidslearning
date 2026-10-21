@@ -1,4 +1,32 @@
-# Welcome to your Expo app 👋
+# Kids Early Learning App 👋
+
+An interactive, kid-friendly early learning mobile and web platform featuring ABC, Numbers, Animals, Solar System, Shapes, Drawing, and educational games!
+
+- **Mobile App**: Built with Expo and React Native (`android/` and `src/`).
+- **Web App**: Built with React, TypeScript, and Vite inside the [`web/`](./web/) folder, ready for free hosting on **GitHub Pages**.
+
+---
+
+## 🌐 Web Version (GitHub Pages)
+
+The web edition is located in the [`web`](./web/) directory.
+
+- **Run Locally**:
+  ```bash
+  cd web
+  npm install
+  npm run dev
+  ```
+- **Build for Production**:
+  ```bash
+  cd web
+  npm run build
+  ```
+- **Deploy to GitHub Pages**: Automated via GitHub Actions workflow [`.github/workflows/deploy-web.yml`](./.github/workflows/deploy-web.yml). See [`web/README.md`](./web/README.md) for full instructions.
+
+---
+
+## 📱 Mobile App (Expo)
 
 This is an [Expo](https://expo.dev) project created with [`create-expo-app`](https://www.npmjs.com/package/create-expo-app).
 

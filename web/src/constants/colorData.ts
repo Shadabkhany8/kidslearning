@@ -1,0 +1,101 @@
+export interface ColorItem {
+  id: string;
+  name: string;
+  color: string;
+  audio: string;
+}
+
+export const APP_COLORS: ColorItem[] = [
+  { id: "red", name: "Red", color: "#FF0000", audio: "colors/red.mp3" },
+  { id: "blue", name: "Blue", color: "#0000FF", audio: "colors/blue.mp3" },
+  { id: "green", name: "Green", color: "#00FF00", audio: "colors/green.mp3" },
+  {
+    id: "yellow",
+    name: "Yellow",
+    color: "#FFFF00",
+    audio: "colors/yellow.mp3",
+  },
+  {
+    id: "purple",
+    name: "Purple",
+    color: "#800080",
+    audio: "colors/purple.mp3",
+  },
+  {
+    id: "orange",
+    name: "Orange",
+    color: "#FFA500",
+    audio: "colors/orange.mp3",
+  },
+  { id: "pink", name: "Pink", color: "#FFC0CB", audio: "colors/pink.mp3" },
+  { id: "brown", name: "Brown", color: "#8B4513", audio: "colors/brown.mp3" },
+  { id: "black", name: "Black", color: "#000000", audio: "colors/black.mp3" },
+  { id: "white", name: "White", color: "#FFFFFF", audio: "colors/white.mp3" },
+  { id: "cyan", name: "Cyan", color: "#00FFFF", audio: "colors/cyan.mp3" },
+  {
+    id: "magenta",
+    name: "Magenta",
+    color: "#FF00FF",
+    audio: "colors/magenta.mp3",
+  },
+  {
+    id: "teal",
+    name: "Teal",
+    color: "#008080",
+    audio: "colors/teal.mp3",
+  },
+  {
+    id: "navy",
+    name: "Navy",
+    color: "#000080",
+    audio: "colors/navy.mp3",
+  },
+  {
+    id: "maroon",
+    name: "Maroon",
+    color: "#800000",
+    audio: "colors/maroon.mp3",
+  },
+  {
+    id: "olive",
+    name: "Olive",
+    color: "#808000",
+    audio: "colors/olive.mp3",
+  },
+  {
+    id: "silver",
+    name: "Silver",
+    color: "#C0C0C0",
+    audio: "colors/silver.mp3",
+  },
+  {
+    id: "gray",
+    name: "Gray",
+    color: "#808080",
+    audio: "colors/gray.mp3",
+  },
+  {
+    id: "indigo",
+    name: "Indigo",
+    color: "#4B0082",
+    audio: "colors/indigo.mp3",
+  },
+  {
+    id: "turquoise",
+    name: "Turquoise",
+    color: "#40E0D0",
+    audio: "colors/turquoise.mp3",
+  },
+  {
+    id: "gold",
+    name: "Gold",
+    color: "#FFD700",
+    audio: "colors/gold.mp3",
+  },
+  {
+    id: "beige",
+    name: "Beige",
+    color: "#F5F5DC",
+    audio: "colors/beige.mp3",
+  },
+];
