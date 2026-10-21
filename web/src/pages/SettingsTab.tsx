@@ -126,164 +126,172 @@ export const SettingsTab: React.FC = () => {
 
         {/* Settings Sections */}
         <div className="settings-sections-wrapper">
-          {/* CHILD PROFILE */}
-          <div className="section-header-title">CHILD PROFILE</div>
-          <div className="settings-card-group">
-            <div
-              className="setting-row-item btn-pressable"
-              onClick={() => handleActionWithGate("profile")}
-            >
-              <div
-                className="setting-icon-box"
-                style={{ backgroundColor: "rgba(72, 52, 212, 0.12)" }}
-              >
-                <Edit3 size={20} color="#4834D4" />
+          <div className="settings-columns-container">
+            {/* Column 1: Profile & Preferences */}
+            <div className="settings-column">
+              {/* CHILD PROFILE */}
+              <div className="section-header-title">CHILD PROFILE</div>
+              <div className="settings-card-group">
+                <div
+                  className="setting-row-item btn-pressable"
+                  onClick={() => handleActionWithGate("profile")}
+                >
+                  <div
+                    className="setting-icon-box"
+                    style={{ backgroundColor: "rgba(72, 52, 212, 0.12)" }}
+                  >
+                    <Edit3 size={20} color="#4834D4" />
+                  </div>
+                  <div className="setting-text-col">
+                    <span className="setting-main-label">Edit Profile</span>
+                    <span className="setting-sub-label">
+                      Name, Age, Class & Photo
+                    </span>
+                  </div>
+                  <ChevronRight size={20} color="#A0AEC0" />
+                </div>
               </div>
-              <div className="setting-text-col">
-                <span className="setting-main-label">Edit Profile</span>
-                <span className="setting-sub-label">
-                  Name, Age, Class & Photo
-                </span>
-              </div>
-              <ChevronRight size={20} color="#A0AEC0" />
-            </div>
-          </div>
 
-          {/* PREFERENCES */}
-          <div className="section-header-title">PREFERENCES</div>
-          <div className="settings-card-group">
-            {/* Sound Toggle */}
-            <div className="setting-row-item border-b">
-              <div
-                className="setting-icon-box"
-                style={{ backgroundColor: "rgba(255, 118, 117, 0.12)" }}
-              >
-                <Volume2 size={20} color="#FF7675" />
-              </div>
-              <div className="setting-text-col">
-                <span className="setting-main-label">Sound Effects</span>
-                <span className="setting-sub-label">
-                  Game sounds & UI clicks
-                </span>
-              </div>
-              <label className="switch-toggle">
-                <input
-                  type="checkbox"
-                  checked={settings.soundEnabled}
-                  onChange={toggleSound}
-                />
-                <span className="switch-slider" />
-              </label>
-            </div>
+              {/* PREFERENCES */}
+              <div className="section-header-title">PREFERENCES</div>
+              <div className="settings-card-group">
+                {/* Sound Toggle */}
+                <div className="setting-row-item border-b">
+                  <div
+                    className="setting-icon-box"
+                    style={{ backgroundColor: "rgba(255, 118, 117, 0.12)" }}
+                  >
+                    <Volume2 size={20} color="#FF7675" />
+                  </div>
+                  <div className="setting-text-col">
+                    <span className="setting-main-label">Sound Effects</span>
+                    <span className="setting-sub-label">
+                      Game sounds & UI clicks
+                    </span>
+                  </div>
+                  <label className="switch-toggle">
+                    <input
+                      type="checkbox"
+                      checked={settings.soundEnabled}
+                      onChange={toggleSound}
+                    />
+                    <span className="switch-slider" />
+                  </label>
+                </div>
 
-            {/* Voice Toggle */}
-            <div className="setting-row-item">
-              <div
-                className="setting-icon-box"
-                style={{ backgroundColor: "rgba(108, 92, 231, 0.12)" }}
-              >
-                <Mic size={20} color="#6C5CE7" />
+                {/* Voice Toggle */}
+                <div className="setting-row-item">
+                  <div
+                    className="setting-icon-box"
+                    style={{ backgroundColor: "rgba(108, 92, 231, 0.12)" }}
+                  >
+                    <Mic size={20} color="#6C5CE7" />
+                  </div>
+                  <div className="setting-text-col">
+                    <span className="setting-main-label">Voice Guidance</span>
+                    <span className="setting-sub-label">
+                      Narrator voice for items
+                    </span>
+                  </div>
+                  <label className="switch-toggle">
+                    <input
+                      type="checkbox"
+                      checked={settings.voiceEnabled}
+                      onChange={toggleVoice}
+                    />
+                    <span className="switch-slider" />
+                  </label>
+                </div>
               </div>
-              <div className="setting-text-col">
-                <span className="setting-main-label">Voice Guidance</span>
-                <span className="setting-sub-label">
-                  Narrator voice for items
-                </span>
-              </div>
-              <label className="switch-toggle">
-                <input
-                  type="checkbox"
-                  checked={settings.voiceEnabled}
-                  onChange={toggleVoice}
-                />
-                <span className="switch-slider" />
-              </label>
-            </div>
-          </div>
-
-          {/* SECURITY & SUPPORT */}
-          <div className="section-header-title">SECURITY & SUPPORT</div>
-          <div className="settings-card-group">
-            {/* Parental Lock Toggle */}
-            <div className="setting-row-item border-b">
-              <div
-                className="setting-icon-box"
-                style={{ backgroundColor: "rgba(253, 203, 110, 0.16)" }}
-              >
-                <ShieldCheck size={20} color="#D97706" />
-              </div>
-              <div className="setting-text-col">
-                <span className="setting-main-label">Parental Lock</span>
-                <span className="setting-sub-label">
-                  Math test for parent features
-                </span>
-              </div>
-              <label className="switch-toggle">
-                <input
-                  type="checkbox"
-                  checked={settings.parentLockEnabled}
-                  onChange={() => handleActionWithGate("lock")}
-                />
-                <span className="switch-slider" />
-              </label>
             </div>
 
-            {/* Rate Experience */}
-            <div
-              className="setting-row-item border-b btn-pressable"
-              onClick={() => {
-                playSound("click");
-                setShowRateModal(true);
-              }}
-            >
-              <div
-                className="setting-icon-box"
-                style={{ backgroundColor: "rgba(233, 30, 99, 0.12)" }}
-              >
-                <Award size={20} color="#E91E63" />
-              </div>
-              <div className="setting-text-col">
-                <span className="setting-main-label">Rate Experience</span>
-                <span className="setting-sub-label">Help us grow better</span>
-              </div>
-              <ChevronRight size={20} color="#A0AEC0" />
-            </div>
+            {/* Column 2: Security, About & Reset */}
+            <div className="settings-column">
+              {/* SECURITY & SUPPORT */}
+              <div className="section-header-title">SECURITY & SUPPORT</div>
+              <div className="settings-card-group">
+                {/* Parental Lock Toggle */}
+                <div className="setting-row-item border-b">
+                  <div
+                    className="setting-icon-box"
+                    style={{ backgroundColor: "rgba(253, 203, 110, 0.16)" }}
+                  >
+                    <ShieldCheck size={20} color="#D97706" />
+                  </div>
+                  <div className="setting-text-col">
+                    <span className="setting-main-label">Parental Lock</span>
+                    <span className="setting-sub-label">
+                      Math test for parent features
+                    </span>
+                  </div>
+                  <label className="switch-toggle">
+                    <input
+                      type="checkbox"
+                      checked={settings.parentLockEnabled}
+                      onChange={() => handleActionWithGate("lock")}
+                    />
+                    <span className="switch-slider" />
+                  </label>
+                </div>
 
-            {/* About App */}
-            <div
-              className="setting-row-item btn-pressable"
-              onClick={() => {
-                playSound("click");
-                setShowAboutModal(true);
-              }}
-            >
-              <div
-                className="setting-icon-box"
-                style={{ backgroundColor: "rgba(162, 155, 254, 0.18)" }}
-              >
-                <Info size={20} color="#6C5CE7" />
-              </div>
-              <div className="setting-text-col">
-                <span className="setting-main-label">About Learning App</span>
-                <span className="setting-sub-label">Version 1.0.0 Web</span>
-              </div>
-              <ChevronRight size={20} color="#A0AEC0" />
-            </div>
-          </div>
+                {/* Rate Experience */}
+                <div
+                  className="setting-row-item border-b btn-pressable"
+                  onClick={() => {
+                    playSound("click");
+                    setShowRateModal(true);
+                  }}
+                >
+                  <div
+                    className="setting-icon-box"
+                    style={{ backgroundColor: "rgba(233, 30, 99, 0.12)" }}
+                  >
+                    <Award size={20} color="#E91E63" />
+                  </div>
+                  <div className="setting-text-col">
+                    <span className="setting-main-label">Rate Experience</span>
+                    <span className="setting-sub-label">Help us grow better</span>
+                  </div>
+                  <ChevronRight size={20} color="#A0AEC0" />
+                </div>
 
-          {/* DANGER ZONE - Reset Progress */}
-          <div className="danger-card-wrapper">
-            <button
-              onClick={() => handleActionWithGate("reset")}
-              className="danger-reset-btn btn-pressable"
-            >
-              <Trash2 size={22} color="#FF5252" />
-              <div className="danger-text-col">
-                <span className="danger-title">Reset All Progress</span>
-                <span className="danger-sub">This will clear all learned items</span>
+                {/* About App */}
+                <div
+                  className="setting-row-item btn-pressable"
+                  onClick={() => {
+                    playSound("click");
+                    setShowAboutModal(true);
+                  }}
+                >
+                  <div
+                    className="setting-icon-box"
+                    style={{ backgroundColor: "rgba(162, 155, 254, 0.18)" }}
+                  >
+                    <Info size={20} color="#6C5CE7" />
+                  </div>
+                  <div className="setting-text-col">
+                    <span className="setting-main-label">About Learning App</span>
+                    <span className="setting-sub-label">Version 1.0.0 Web</span>
+                  </div>
+                  <ChevronRight size={20} color="#A0AEC0" />
+                </div>
               </div>
-              <ChevronRight size={20} color="#FF5252" />
-            </button>
+
+              {/* DANGER ZONE - Reset Progress */}
+              <div className="danger-card-wrapper">
+                <button
+                  onClick={() => handleActionWithGate("reset")}
+                  className="danger-reset-btn btn-pressable"
+                >
+                  <Trash2 size={22} color="#FF5252" />
+                  <div className="danger-text-col">
+                    <span className="danger-title">Reset All Progress</span>
+                    <span className="danger-sub">This will clear all learned items</span>
+                  </div>
+                  <ChevronRight size={20} color="#FF5252" />
+                </button>
+              </div>
+            </div>
           </div>
         </div>
       </div>
@@ -468,12 +476,25 @@ export const SettingsTab: React.FC = () => {
           padding: 10px 18px 30px 18px;
         }
 
+        .settings-columns-container {
+          display: flex;
+          flex-direction: column;
+          gap: 12px;
+        }
+
+        .wide-mode .settings-columns-container {
+          display: grid;
+          grid-template-columns: 1fr 1fr;
+          gap: 20px;
+          align-items: start;
+        }
+
         .section-header-title {
           font-size: 12.5px;
           font-weight: 800;
           color: #495057;
           letter-spacing: 1.2px;
-          margin: 16px 0 8px 8px;
+          margin: 12px 0 6px 8px;
         }
 
         .settings-card-group {

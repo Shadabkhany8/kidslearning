@@ -32,7 +32,13 @@ import { ColorFillGamePage } from "./pages/games/ColorFillGamePage";
 import { Smartphone, Monitor } from "lucide-react";
 
 export const App: React.FC = () => {
-  const [isWideMode, setIsWideMode] = useState(false);
+  // On desktop / tablet screens (>= 768px), default to Wide Mode for a proper web app experience!
+  const [isWideMode, setIsWideMode] = useState<boolean>(() => {
+    if (typeof window !== "undefined") {
+      return window.innerWidth >= 768;
+    }
+    return false;
+  });
 
   return (
     <SettingsProvider>
@@ -42,17 +48,17 @@ export const App: React.FC = () => {
           <div className="desktop-controls-bar">
             <button
               onClick={() => setIsWideMode(!isWideMode)}
-              title="Toggle Desktop / Mobile Screen Width"
+              title={isWideMode ? "Switch to Phone Frame View" : "Switch to Desktop Wide View"}
             >
               {isWideMode ? (
                 <>
                   <Smartphone size={16} />
-                  <span>Mobile View</span>
+                  <span>Phone View</span>
                 </>
               ) : (
                 <>
                   <Monitor size={16} />
-                  <span>Tablet View</span>
+                  <span>Desktop View</span>
                 </>
               )}
             </button>

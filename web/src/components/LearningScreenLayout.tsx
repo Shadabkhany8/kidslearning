@@ -625,6 +625,12 @@ export function LearningScreenLayout<T extends Record<string, any>>({
           gap: 12px;
         }
 
+        .wide-mode .levels-list {
+          display: grid;
+          grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+          gap: 14px;
+        }
+
         .level-card-item {
           display: flex;
           align-items: center;
@@ -758,42 +764,43 @@ export function LearningScreenLayout<T extends Record<string, any>>({
         }
 
         .learning-scroll {
-          padding: 20px 18px 40px 18px;
+          padding: clamp(10px, 1.8vh, 18px) 16px clamp(20px, 3.5vh, 36px) 16px;
           display: flex;
           flex-direction: column;
           align-items: center;
+          justify-content: center;
         }
 
         .flashcard-card-box {
           width: 100%;
           max-width: 380px;
           background: white;
-          border-radius: 36px;
-          padding: 24px 20px;
-          box-shadow: 0 12px 36px rgba(0, 0, 0, 0.08);
-          border: 4px solid;
+          border-radius: 28px;
+          padding: clamp(14px, 2vh, 22px) 18px;
+          box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+          border: 3.5px solid;
           display: flex;
           flex-direction: column;
           align-items: center;
           position: relative;
-          margin-bottom: 24px;
+          margin-bottom: clamp(10px, 1.8vh, 18px);
           animation: bounceIn 0.35s cubic-bezier(0.34, 1.56, 0.64, 1);
         }
 
         .card-sparkle-top-left {
           position: absolute;
-          top: 18px;
-          left: 18px;
+          top: 14px;
+          left: 14px;
         }
 
         .card-visual-pod {
-          width: 190px;
-          height: 190px;
-          border-radius: 36px;
+          width: clamp(130px, 19vh, 180px);
+          height: clamp(130px, 19vh, 180px);
+          border-radius: 28px;
           display: flex;
           align-items: center;
           justify-content: center;
-          margin-bottom: 16px;
+          margin-bottom: clamp(8px, 1.4vh, 14px);
           cursor: pointer;
           transition: transform 0.2s ease;
         }
@@ -803,8 +810,8 @@ export function LearningScreenLayout<T extends Record<string, any>>({
         }
 
         .card-main-image {
-          width: 145px;
-          height: 145px;
+          width: clamp(100px, 14vh, 140px);
+          height: clamp(100px, 14vh, 140px);
           object-fit: contain;
           filter: drop-shadow(0 6px 12px rgba(0, 0, 0, 0.12));
         }

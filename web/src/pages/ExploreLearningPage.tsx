@@ -109,13 +109,18 @@ export const ExploreLearningPage: React.FC = () => {
         }
 
         .features-grid-section {
-          padding: 20px 16px;
+          padding: 16px;
         }
 
         .cards-two-column-grid {
           display: grid;
           grid-template-columns: repeat(2, 1fr);
-          gap: 14px;
+          gap: 12px;
+        }
+
+        .wide-mode .cards-two-column-grid {
+          grid-template-columns: repeat(4, 1fr);
+          gap: 16px;
         }
       `}</style>
     </div>

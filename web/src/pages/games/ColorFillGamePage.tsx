@@ -469,31 +469,44 @@ export const ColorFillGamePage: React.FC = () => {
           justify-content: center;
         }
 
+        .levels-list {
+          display: flex;
+          flex-direction: column;
+          gap: 12px;
+        }
+
+        .wide-mode .levels-list {
+          display: grid;
+          grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+          gap: 14px;
+        }
+
         .coloring-header-title {
           font-size: 19px;
           font-weight: 900;
         }
 
         .coloring-scroll {
-          padding: 20px 18px 40px 18px;
+          padding: clamp(10px, 1.8vh, 18px) 16px clamp(16px, 3vh, 32px) 16px;
           display: flex;
           flex-direction: column;
           align-items: center;
+          justify-content: center;
         }
 
         .svg-coloring-card {
           width: 100%;
-          max-width: 360px;
+          max-width: clamp(240px, 36vh, 340px);
           aspect-ratio: 1;
           background: white;
-          border-radius: 32px;
-          padding: 20px;
-          box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+          border-radius: 28px;
+          padding: 16px;
+          box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
           border: 3px solid #E2E8F0;
           display: flex;
           align-items: center;
           justify-content: center;
-          margin-bottom: 20px;
+          margin-bottom: clamp(10px, 1.5vh, 16px);
         }
 
         .interactive-coloring-svg {

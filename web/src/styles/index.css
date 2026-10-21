@@ -29,7 +29,7 @@
 html, body {
   width: 100%;
   height: 100%;
-  overflow-x: hidden;
+  overflow: hidden; /* Prevent web window vertical scroll */
   background-color: #EBF3FA;
   font-family: var(--font-family);
   color: var(--text-main);
@@ -38,46 +38,50 @@ html, body {
 
 /* App Desktop Container: Beautiful centered frame on desktop, natural full-width on mobile */
 .app-viewport-wrapper {
-  min-height: 100vh;
+  width: 100%;
+  height: 100vh;
+  max-height: 100vh;
+  overflow: hidden;
   display: flex;
   justify-content: center;
   align-items: center;
   background: radial-gradient(circle at 10% 20%, #E0EAFF 0%, #F5F3FF 50%, #FFF5EB 100%);
   padding: 0;
+  box-sizing: border-box;
 }
 
 @media (min-width: 600px) {
   .app-viewport-wrapper {
-    padding: 24px 16px;
+    padding: 12px 16px;
   }
 }
 
 .app-screen-container {
   width: 100%;
-  max-width: 480px;
+  max-width: 460px;
   height: 100vh;
-  min-height: 100vh;
+  max-height: 100vh;
   background-color: #F8FAFD;
   position: relative;
   overflow: hidden;
   display: flex;
   flex-direction: column;
   box-shadow: var(--shadow-lg);
+  transition: max-width 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
 }
 
 @media (min-width: 600px) {
   .app-screen-container {
-    height: 94vh;
-    min-height: 840px;
-    max-height: 960px;
-    border-radius: 40px;
-    border: 8px solid rgba(255, 255, 255, 0.85);
+    height: calc(100vh - 24px);
+    max-height: 860px;
+    border-radius: 36px;
+    border: 6px solid rgba(255, 255, 255, 0.85);
   }
 }
 
-/* Wide screen mode toggle for desktop users if they want tablet view */
+/* Wide screen mode toggle for desktop users */
 .app-screen-container.wide-mode {
-  max-width: 900px;
+  max-width: 1040px;
 }
 
 .desktop-controls-bar {
@@ -128,14 +132,16 @@ html, body {
   overflow-y: auto;
   overflow-x: hidden;
   -webkit-overflow-scrolling: touch;
-  padding-bottom: 96px; /* space for floating dock */
+  padding-bottom: clamp(66px, 8.5vh, 84px); /* space for floating dock */
   position: relative;
   z-index: 10;
+  display: flex;
+  flex-direction: column;
 }
 
 /* Custom friendly scrollbar */
 .screen-scroll-view::-webkit-scrollbar {
-  width: 6px;
+  width: 5px;
 }
 .screen-scroll-view::-webkit-scrollbar-track {
   background: transparent;

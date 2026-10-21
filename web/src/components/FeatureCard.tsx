@@ -112,13 +112,17 @@ export const FeatureCard: React.FC<FeatureCardProps> = ({
           display: flex;
           flex-direction: column;
           width: 100%;
-          min-width: 140px;
-          height: 195px;
+          min-width: 120px;
+          height: clamp(120px, 16.5vh, 165px);
           transition: transform 0.22s cubic-bezier(0.34, 1.56, 0.64, 1), box-shadow 0.22s ease;
         }
 
+        .wide-mode .feature-card-wrapper {
+          height: clamp(135px, 20vh, 175px);
+        }
+
         .feature-card-wrapper:hover {
-          transform: translateY(-5px) scale(1.02);
+          transform: translateY(-4px) scale(1.02);
         }
 
         .feature-card-wrapper:active {
@@ -128,17 +132,17 @@ export const FeatureCard: React.FC<FeatureCardProps> = ({
         .feature-card-inner {
           width: 100%;
           height: 100%;
-          border-radius: 28px;
+          border-radius: 22px;
           background: #FFFFFF;
           overflow: hidden;
           display: flex;
           flex-direction: column;
-          box-shadow: 0 8px 20px rgba(0, 0, 0, 0.06);
+          box-shadow: 0 6px 18px rgba(0, 0, 0, 0.06);
           position: relative;
         }
 
         .feature-card-top {
-          height: 64%;
+          height: 60%;
           position: relative;
           display: flex;
           align-items: center;
@@ -156,8 +160,8 @@ export const FeatureCard: React.FC<FeatureCardProps> = ({
         }
 
         .icon-pod {
-          width: 76px;
-          height: 76px;
+          width: clamp(46px, 6.2vh, 62px);
+          height: clamp(46px, 6.2vh, 62px);
           border-radius: 50%;
           background: rgba(255, 255, 255, 0.3);
           backdrop-filter: blur(4px);
@@ -173,10 +177,10 @@ export const FeatureCard: React.FC<FeatureCardProps> = ({
         }
 
         .card-feature-img {
-          width: 54px;
-          height: 54px;
+          width: clamp(32px, 4.4vh, 44px);
+          height: clamp(32px, 4.4vh, 44px);
           object-fit: contain;
-          filter: drop-shadow(0 3px 6px rgba(0, 0, 0, 0.12));
+          filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.12));
         }
 
         .deco-circle {
@@ -186,36 +190,36 @@ export const FeatureCard: React.FC<FeatureCardProps> = ({
           pointer-events: none;
         }
         .deco-circle-1 {
-          width: 70px;
-          height: 70px;
-          top: -15px;
-          right: -15px;
+          width: 55px;
+          height: 55px;
+          top: -12px;
+          right: -12px;
         }
         .deco-circle-2 {
-          width: 45px;
-          height: 45px;
-          bottom: -10px;
-          left: -10px;
+          width: 35px;
+          height: 35px;
+          bottom: -8px;
+          left: -8px;
         }
         .deco-circle-3 {
-          width: 30px;
-          height: 30px;
-          top: 15px;
-          left: -15px;
+          width: 25px;
+          height: 25px;
+          top: 10px;
+          left: -10px;
         }
 
         .feature-card-bottom {
-          height: 36%;
-          padding: 8px 10px;
+          height: 40%;
+          padding: 4px 8px;
           display: flex;
           flex-direction: column;
           align-items: center;
           justify-content: center;
-          gap: 4px;
+          gap: 2px;
         }
 
         .card-title-text {
-          font-size: 15.5px;
+          font-size: clamp(12.5px, 1.7vh, 15px);
           font-weight: 800;
           letter-spacing: -0.2px;
           white-space: nowrap;
@@ -226,9 +230,9 @@ export const FeatureCard: React.FC<FeatureCardProps> = ({
         }
 
         .card-level-pill {
-          font-size: 11px;
+          font-size: clamp(9.5px, 1.25vh, 11px);
           font-weight: 800;
-          padding: 2.5px 10px;
+          padding: 2px 8px;
           border-radius: 20px;
           border: 1px solid;
           display: inline-flex;

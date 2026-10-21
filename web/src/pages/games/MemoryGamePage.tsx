@@ -272,27 +272,29 @@ export const MemoryGamePage: React.FC = () => {
         }
 
         .memory-scroll-content {
-          padding: 20px 16px 40px 16px;
+          padding: clamp(10px, 1.8vh, 18px) 16px clamp(16px, 3vh, 32px) 16px;
           display: flex;
           flex-direction: column;
           align-items: center;
+          justify-content: center;
         }
 
         .memory-stats-strip {
           display: flex;
-          gap: 16px;
-          margin-bottom: 20px;
+          gap: 12px;
+          margin-bottom: clamp(10px, 1.5vh, 18px);
         }
 
         .stat-pill {
           background: white;
-          padding: 8px 18px;
+          padding: clamp(4px, 0.8vh, 7px) clamp(12px, 1.5vw, 16px);
           border-radius: 20px;
           box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
           border: 1.5px solid #E2E8F0;
           font-weight: 800;
           display: flex;
           gap: 6px;
+          font-size: clamp(12px, 1.6vh, 14px);
         }
 
         .stat-label {
@@ -305,9 +307,14 @@ export const MemoryGamePage: React.FC = () => {
         .memory-cards-grid {
           display: grid;
           grid-template-columns: repeat(4, 1fr);
-          gap: 10px;
+          gap: clamp(6px, 1vh, 10px);
           width: 100%;
-          max-width: 400px;
+          max-width: clamp(280px, 46vh, 420px);
+        }
+
+        .wide-mode .memory-cards-grid {
+          max-width: 480px;
+          gap: 12px;
         }
 
         .memory-card-flip-wrap {

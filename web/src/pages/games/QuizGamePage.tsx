@@ -180,34 +180,35 @@ export const QuizGamePage: React.FC = () => {
         }
 
         .quiz-scroll-content {
-          padding: 24px 18px 40px 18px;
+          padding: clamp(10px, 1.8vh, 18px) 16px clamp(16px, 3vh, 32px) 16px;
           display: flex;
           flex-direction: column;
           align-items: center;
+          justify-content: center;
         }
 
         .question-card-container {
           width: 100%;
-          max-width: 380px;
+          max-width: 480px;
           background: white;
-          border-radius: 32px;
-          padding: 24px 20px;
-          box-shadow: 0 10px 30px rgba(0, 0, 0, 0.06);
+          border-radius: 28px;
+          padding: clamp(12px, 1.8vh, 18px) 16px;
+          box-shadow: 0 8px 24px rgba(0, 0, 0, 0.06);
           border: 3px solid #FFEAA7;
           display: flex;
           flex-direction: column;
           align-items: center;
           position: relative;
-          margin-bottom: 24px;
+          margin-bottom: clamp(10px, 1.6vh, 18px);
           text-align: center;
         }
 
         .speaker-replay-btn {
           position: absolute;
-          top: 14px;
-          right: 14px;
-          width: 42px;
-          height: 42px;
+          top: 12px;
+          right: 12px;
+          width: 38px;
+          height: 38px;
           border-radius: 50%;
           background: #FF9F1C;
           display: flex;
@@ -217,16 +218,16 @@ export const QuizGamePage: React.FC = () => {
         }
 
         .question-prefix {
-          font-size: 14px;
+          font-size: 13px;
           font-weight: 800;
           color: #718096;
           text-transform: uppercase;
           letter-spacing: 1px;
-          margin-bottom: 4px;
+          margin-bottom: 2px;
         }
 
         .question-target-name {
-          font-size: 32px;
+          font-size: clamp(24px, 3.5vh, 32px);
           font-weight: 900;
           color: #E17055;
           letter-spacing: -0.5px;
@@ -238,31 +239,37 @@ export const QuizGamePage: React.FC = () => {
           gap: 6px;
           background: #00B894;
           color: white;
-          padding: 6px 16px;
+          padding: 4px 14px;
           border-radius: 20px;
-          font-size: 14px;
+          font-size: 13px;
           font-weight: 800;
-          margin-top: 10px;
+          margin-top: 6px;
           animation: bounceIn 0.3s ease;
         }
 
         .quiz-options-grid {
           width: 100%;
-          max-width: 380px;
+          max-width: 420px;
           display: grid;
           grid-template-columns: repeat(2, 1fr);
+          gap: clamp(10px, 1.5vh, 16px);
+        }
+
+        .wide-mode .quiz-options-grid {
+          max-width: 800px;
+          grid-template-columns: repeat(4, 1fr);
           gap: 16px;
         }
 
         .quiz-option-card {
           background: white;
-          border-radius: 28px;
-          padding: 16px 12px;
+          border-radius: 24px;
+          padding: clamp(8px, 1.3vh, 14px) 10px;
           display: flex;
           flex-direction: column;
           align-items: center;
           justify-content: center;
-          box-shadow: 0 8px 20px rgba(0, 0, 0, 0.05);
+          box-shadow: 0 6px 18px rgba(0, 0, 0, 0.05);
           border: 3px solid #EDF2F7;
           cursor: pointer;
           transition: all 0.2s cubic-bezier(0.34, 1.56, 0.64, 1);
@@ -274,8 +281,8 @@ export const QuizGamePage: React.FC = () => {
         }
 
         .quiz-option-img-pod {
-          width: 90px;
-          height: 90px;
+          width: clamp(60px, 8.5vh, 85px);
+          height: clamp(60px, 8.5vh, 85px);
           display: flex;
           align-items: center;
           justify-content: center;

@@ -89,7 +89,7 @@ export const TabBar: React.FC = () => {
       <style>{`
         .tab-dock-container {
           position: absolute;
-          bottom: 18px;
+          bottom: clamp(8px, 1.4vh, 16px);
           left: 0;
           right: 0;
           display: flex;
@@ -101,19 +101,19 @@ export const TabBar: React.FC = () => {
 
         .tab-dock-glass {
           pointer-events: auto;
-          width: 84%;
+          width: 86%;
           max-width: 380px;
-          height: 66px;
+          height: clamp(52px, 6.8vh, 62px);
           border-radius: 35px;
-          background: rgba(255, 255, 255, 0.78);
+          background: rgba(255, 255, 255, 0.88);
           backdrop-filter: blur(20px);
           -webkit-backdrop-filter: blur(20px);
-          border: 2px solid rgba(255, 255, 255, 0.85);
-          box-shadow: 0 10px 30px rgba(108, 92, 231, 0.18), 0 2px 6px rgba(0, 0, 0, 0.04);
+          border: 2px solid rgba(255, 255, 255, 0.95);
+          box-shadow: 0 10px 30px rgba(108, 92, 231, 0.2), 0 2px 6px rgba(0, 0, 0, 0.04);
           display: flex;
           justify-content: space-around;
           align-items: center;
-          padding: 0 10px;
+          padding: 0 8px;
         }
 
         .tab-item-btn {
@@ -123,7 +123,7 @@ export const TabBar: React.FC = () => {
           align-items: center;
           justify-content: center;
           gap: 6px;
-          padding: 8px 18px;
+          padding: clamp(6px, 0.9vh, 8px) clamp(10px, 1.8vw, 18px);
           border-radius: 26px;
           cursor: pointer;
           transition: all 0.25s cubic-bezier(0.34, 1.56, 0.64, 1);
@@ -139,7 +139,7 @@ export const TabBar: React.FC = () => {
           background: var(--tab-gradient);
           color: #FFFFFF;
           box-shadow: 0 4px 14px rgba(0, 0, 0, 0.15);
-          transform: scale(1.05);
+          transform: scale(1.04);
         }
 
         .tab-icon-wrapper {
@@ -148,8 +148,13 @@ export const TabBar: React.FC = () => {
           justify-content: center;
         }
 
+        .tab-icon-wrapper svg {
+          width: clamp(20px, 2.8vh, 24px);
+          height: clamp(20px, 2.8vh, 24px);
+        }
+
         .tab-label {
-          font-size: 13.5px;
+          font-size: clamp(12px, 1.5vh, 13.5px);
           font-weight: 800;
           letter-spacing: -0.2px;
         }
