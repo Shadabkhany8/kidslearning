@@ -89,13 +89,13 @@ export const TabBar: React.FC = () => {
       <style>{`
         .tab-dock-container {
           position: absolute;
-          bottom: clamp(8px, 1.4vh, 16px);
+          bottom: max(10px, env(safe-area-inset-bottom, 10px));
           left: 0;
           right: 0;
           display: flex;
           justify-content: center;
           align-items: center;
-          z-index: 80;
+          z-index: 99;
           pointer-events: none;
         }
 

@@ -102,13 +102,12 @@ export const GamesTab: React.FC = () => {
           position: relative;
           display: flex;
           flex-direction: column;
-          overflow: hidden;
         }
 
         .games-screen-scroll {
           display: flex;
           flex-direction: column;
-          justify-content: space-between;
+          gap: clamp(10px, 1.8vh, 18px);
         }
 
         .games-header {
@@ -248,11 +247,8 @@ export const GamesTab: React.FC = () => {
         }
 
         .features-grid-section {
-          padding: 2px 16px 6px 16px;
-          flex: 1;
-          display: flex;
-          flex-direction: column;
-          justify-content: center;
+          padding: 0 16px;
+          width: 100%;
         }
 
         .cards-two-column-grid {

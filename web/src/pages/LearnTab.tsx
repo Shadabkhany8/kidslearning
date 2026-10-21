@@ -134,13 +134,12 @@ export const LearnTab: React.FC = () => {
           position: relative;
           display: flex;
           flex-direction: column;
-          overflow: hidden;
         }
 
         .learn-screen-scroll {
           display: flex;
           flex-direction: column;
-          justify-content: space-between;
+          gap: clamp(8px, 1.5vh, 14px);
         }
 
         .learn-header {
@@ -235,11 +234,8 @@ export const LearnTab: React.FC = () => {
         }
 
         .features-grid-section {
-          padding: 2px 16px 6px 16px;
-          flex: 1;
-          display: flex;
-          flex-direction: column;
-          justify-content: center;
+          padding: 0 16px;
+          width: 100%;
         }
 
         .cards-two-column-grid {
